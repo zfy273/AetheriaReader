@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">蒼穹文庫 / Aetheria</string>
+    <string name="library_title">本棚</string>
+    <string name="settings_title">設定</string>
+    <string name="history_title">読み履歴</string>
+    <string name="import_books">ローカル本を導入</string>
+    <string name="import_directory">フォルダをスキャン</string>
+    <string name="import_success">%d 冊の本を正常に導入しました</string>
+    <string name="import_failed">導入失敗：フォルダにアクセスできません</string>
+    <string name="no_books_found">ローカルの TXT, EPUB, PDF または RAR 書籍は見つかりませんでした</string>
+    <string name="book_format_txt">テキスト (TXT)</string>
+    <string name="book_format_epub">電子書籍 (EPUB)</string>
+    <string name="book_format_pdf">ドキュメント (PDF)</string>
+    <string name="book_format_comic">コミック (RAR)</string>
+    <string name="empty_library">物語のない本棚。下のボタンをクリックして、お気に入りの書籍をインポートしてください。</string>
+    
+    <!-- Reader Menu -->
+    <string name="menu_font_size">フォントサイズ</string>
+    <string name="menu_line_height">行の高さ</string>
+    <string name="menu_margin">余白</string>
+    <string name="menu_theme">読書テーマ</string>
+    <string name="theme_claude_paper">生成り紙 (Paper)</string>
+    <string name="theme_midnight_ink">水漆黒 (Midnight)</string>
+    <string name="menu_progress">読書進捗</string>
+    <string name="menu_chapters">章目次</string>
+    
+    <!-- Reading Settings Detail -->
+    <string name="margin_narrow">狭い</string>
+    <string name="margin_normal">標準</string>
+    <string name="margin_wide">広い</string>
+    
+    <string name="line_height_tight">狭い</string>
+    <string name="line_height_normal">標準</string>
+    <string name="line_height_loose">広い</string>
+    
+    <string name="language_selection">表示言語</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+    
+    <!-- Book Details & Metadata -->
+    <string name="book_progress">%1$s / %2$s バイト - %3$.1f%%</string>
+    <string name="book_progress_short">%1$.1f%% 読了</string>
+    <string name="book_added">追加日：%s</string>
+    <string name="book_size">サイズ：%s</string>
+    <string name="chapter_count">全 %d 章</string>
+    <string name="untitled_book">無題の書籍</string>
+    <string name="untitled_chapter">無題の章</string>
+    
+    <!-- Dialog & Action Buttons -->
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_confirm">確認</string>
+    <string name="action_delete">本を削除</string>
+    <string name="delete_confirm_title">書籍削除の確認</string>
+    <string name="delete_confirm_message">本当に「%1$s」をライブラリから削除しますか？元のファイルは削除されません。</string>
+    <string name="permission_required">アクセス許可</string>
+    <string name="permission_saf_rationale">蒼穹文庫は、ローカル書籍やコミックをスキャンして解析するために、指定したフォルダへのアクセス権限が必要です。</string>
+    <string name="select_folder">本庫フォルダを選択</string>
+</resources>

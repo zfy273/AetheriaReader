@@ -1,0 +1,6 @@
+{
+  "name": "Aetheria Reader",
+  "description": "A premium, minimalist 100% offline local book & comic reader styled with Claude Paper aesthetics, supporting TXT byte-offset scanning, EPUB metadata spine extraction, PDF rendering, and RAR comics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

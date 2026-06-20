@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">苍穹阅读 / Aetheria</string>
+    <string name="library_title">书架 / 漫阅</string>
+    <string name="settings_title">设置 / 偏好</string>
+    <string name="history_title">阅读历史</string>
+    <string name="import_books">导入本地图书</string>
+    <string name="import_directory">扫描本地目录</string>
+    <string name="import_success">已成功导入 %d 本图书</string>
+    <string name="import_failed">导入失败：无法访问该目录</string>
+    <string name="no_books_found">未找到本地 TXT, EPUB, PDF 或 RAR 书籍</string>
+    <string name="book_format_txt">文本 (TXT)</string>
+    <string name="book_format_epub">电子书 (EPUB)</string>
+    <string name="book_format_pdf">文档 (PDF)</string>
+    <string name="book_format_comic">漫画 (RAR)</string>
+    <string name="empty_library">极简书卷，待您落墨。点击下方按钮导入您喜爱的图书。</string>
+    
+    <!-- Reader Menu -->
+    <string name="menu_font_size">字体大小</string>
+    <string name="menu_line_height">行间距</string>
+    <string name="menu_margin">页边距</string>
+    <string name="menu_theme">阅读主题</string>
+    <string name="theme_claude_paper">纸质暖白</string>
+    <string name="theme_midnight_ink">水墨深夜</string>
+    <string name="menu_progress">阅读进度</string>
+    <string name="menu_chapters">章节目录</string>
+    
+    <!-- Reading Settings Detail -->
+    <string name="margin_narrow">窄</string>
+    <string name="margin_normal">适中</string>
+    <string name="margin_wide">宽</string>
+    
+    <string name="line_height_tight">紧凑</string>
+    <string name="line_height_normal">标准</string>
+    <string name="line_height_loose">宽松</string>
+    
+    <string name="language_selection">界面语言</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+    
+    <!-- Book Details & Metadata -->
+    <string name="book_progress">%1$s / %2$s 字节 - %3$.1f%%</string>
+    <string name="book_progress_short">%1$.1f%% 已读</string>
+    <string name="book_added">添加时间：%s</string>
+    <string name="book_size">文件大小：%s</string>
+    <string name="chapter_count">共 %d 章</string>
+    <string name="untitled_book">未命名书籍</string>
+    <string name="untitled_chapter">未命名章节</string>
+    
+    <!-- Dialog & Action Buttons -->
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确定</string>
+    <string name="action_delete">删除书籍</string>
+    <string name="delete_confirm_title">确认删除</string>
+    <string name="delete_confirm_message">您确定要从书架中移除《%1$s》吗？此操作不会删除源文件。</string>
+    <string name="permission_required">权限申请</string>
+    <string name="permission_saf_rationale">苍穹阅读器需要访问您指定的文件夹，以自动扫描并解析本地书籍与漫画。</string>
+    <string name="select_folder">选择书库文件夹</string>
+</resources>

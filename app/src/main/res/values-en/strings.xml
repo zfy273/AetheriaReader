@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aetheria Reader</string>
+    <string name="library_title">Library</string>
+    <string name="settings_title">Settings</string>
+    <string name="history_title">Reading History</string>
+    <string name="import_books">Import Local Books</string>
+    <string name="import_directory">Scan Directory</string>
+    <string name="import_success">Successfully imported %d books</string>
+    <string name="import_failed">Import failed: cannot access directory</string>
+    <string name="no_books_found">No local TXT, EPUB, PDF, or RAR books found</string>
+    <string name="book_format_txt">TXT Document</string>
+    <string name="book_format_epub">EPUB E-Book</string>
+    <string name="book_format_pdf">PDF Document</string>
+    <string name="book_format_comic">RAR Comic</string>
+    <string name="empty_library">A clean slate, waiting for your stories. Tap below to import your favorite books.</string>
+    
+    <!-- Reader Menu -->
+    <string name="menu_font_size">Font Size</string>
+    <string name="menu_line_height">Line Height</string>
+    <string name="menu_margin">Margins</string>
+    <string name="menu_theme">Reader Theme</string>
+    <string name="theme_claude_paper">Claude Paper</string>
+    <string name="theme_midnight_ink">Midnight Ink</string>
+    <string name="menu_progress">Progress</string>
+    <string name="menu_chapters">Table of Contents</string>
+    
+    <!-- Reading Settings Detail -->
+    <string name="margin_narrow">Narrow</string>
+    <string name="margin_normal">Normal</string>
+    <string name="margin_wide">Wide</string>
+    
+    <string name="line_height_tight">Tight</string>
+    <string name="line_height_normal">Normal</string>
+    <string name="line_height_loose">Loose</string>
+    
+    <string name="language_selection">Language</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+    
+    <!-- Book Details & Metadata -->
+    <string name="book_progress">%1$s / %2$s bytes - %3$.1f%%</string>
+    <string name="book_progress_short">%1$.1f%% Read</string>
+    <string name="book_added">Added: %s</string>
+    <string name="book_size">Size: %s</string>
+    <string name="chapter_count">%d chapters</string>
+    <string name="untitled_book">Untitled Book</string>
+    <string name="untitled_chapter">Untitled Chapter</string>
+    
+    <!-- Dialog & Action Buttons -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm">OK</string>
+    <string name="action_delete">Remove Book</string>
+    <string name="delete_confirm_title">Remove Book</string>
+    <string name="delete_confirm_message">Are you sure you want to remove \"%1$s\" from your library? The original file will not be deleted.</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_saf_rationale">Aetheria Reader requires access to your chosen folder to scan and parse your local books and comics.</string>
+    <string name="select_folder">Select Library Folder</string>
+</resources>
