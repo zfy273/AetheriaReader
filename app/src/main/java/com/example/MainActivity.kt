@@ -19,6 +19,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.remember
+import androidx.compose.ui.platform.LocalContext
+import java.util.Locale
 import com.example.ui.screens.*
 import com.example.ui.theme.MyApplicationTheme
 import com.example.viewmodel.ReaderViewModel
@@ -31,6 +35,25 @@ class MainActivity : ComponentActivity() {
       MyApplicationTheme {
         val viewModel: ReaderViewModel = viewModel()
         val currentScreen by viewModel.currentScreen.collectAsState()
+        val localeCode by viewModel.localeCode.collectAsState()
+
+        val context = LocalContext.current
+        remember(localeCode) {
+          val locale = Locale(localeCode)
+          Locale.setDefault(locale)
+          val resources = context.resources
+          val config = android.content.res.Configuration(resources.configuration)
+          config.setLocale(locale)
+          @Suppress("DEPRECATION")
+          resources.updateConfiguration(config, resources.displayMetrics)
+
+          val appResources = context.applicationContext.resources
+          val appConfig = android.content.res.Configuration(appResources.configuration)
+          appConfig.setLocale(locale)
+          @Suppress("DEPRECATION")
+          appResources.updateConfiguration(appConfig, appResources.displayMetrics)
+          localeCode
+        }
 
         Scaffold(
           modifier = Modifier.fillMaxSize()

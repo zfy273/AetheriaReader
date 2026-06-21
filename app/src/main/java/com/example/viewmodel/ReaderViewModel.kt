@@ -113,12 +113,12 @@ class ReaderViewModel(application: Application) : AndroidViewModel(application) 
         _localeCode.value = locale
         sharedPrefs.edit().putString("app_locale", locale).apply()
         
-        // This helps triggers UI rebuild and updates core context languages
-        val locales = android.os.LocaleList(java.util.Locale(locale))
-        android.os.LocaleList.setDefault(locales)
+        val javaLocale = java.util.Locale(locale)
+        java.util.Locale.setDefault(javaLocale)
         val config = context.resources.configuration
-        config.setLocales(locales)
-        context.createConfigurationContext(config)
+        config.setLocale(javaLocale)
+        @Suppress("DEPRECATION")
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
     }
 
     // --- Reader Configuration controllers ---
