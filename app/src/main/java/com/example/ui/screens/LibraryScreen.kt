@@ -60,7 +60,6 @@ fun LibraryScreen(
     var searchQuery by remember { mutableStateOf("") }
     var activeFilterTab by remember { mutableStateOf(0) } // 0 = 书架 (All), 1 = 正在阅读 (Reading), 2 = 收藏夹 (Favorites)
     var selectedBookToDelete by remember { mutableStateOf<BookEntity?>(null) }
-    var showLanguageMenu by remember { mutableStateOf(false) }
 
     // Directory selector launcher (SAF ACTION_OPEN_DOCUMENT_TREE)
     val directoryPickerLauncher = rememberLauncherForActivityResult(
@@ -122,12 +121,6 @@ fun LibraryScreen(
                         onClick = {}
                     )
                     FooterItem(
-                        icon = Icons.Default.Menu,
-                        label = stringResource(R.string.language_selection),
-                        isActive = false,
-                        onClick = { showLanguageMenu = true }
-                    )
-                    FooterItem(
                         icon = Icons.Default.Settings,
                         label = stringResource(R.string.settings_title),
                         isActive = false,
@@ -182,22 +175,8 @@ fun LibraryScreen(
                             )
                         }
 
-                        // Language Switch action trigger
-                        Box(
-                            modifier = Modifier
-                                .size(44.dp)
-                                .shadow(2.dp, CircleShape)
-                                .background(MaterialTheme.colorScheme.surface, CircleShape)
-                                .clickable { showLanguageMenu = true },
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Menu,
-                                contentDescription = "Switch Languages",
-                                tint = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-                                modifier = Modifier.size(20.dp)
-                            )
-                        }
+                        // Placeholder for symmetry if needed, or remove completely
+                        // (We just removed language switch here)
                     }
                 }
             }
@@ -363,42 +342,6 @@ fun LibraryScreen(
                 }
             }
         }
-    }
-
-    // --- LANGUAGE SELECTOR DIALOG ---
-    if (showLanguageMenu) {
-        AlertDialog(
-            onDismissRequest = { showLanguageMenu = false },
-            title = {
-                Text(
-                    text = stringResource(R.string.language_selection),
-                    fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold
-                )
-            },
-            text = {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    LanguageMenuOption("简体中文", activeLocale == "zh") {
-                        viewModel.updateLocale("zh")
-                        showLanguageMenu = false
-                    }
-                    LanguageMenuOption("English", activeLocale == "en") {
-                        viewModel.updateLocale("en")
-                        showLanguageMenu = false
-                    }
-                    LanguageMenuOption("日本語", activeLocale == "ja") {
-                        viewModel.updateLocale("ja")
-                        showLanguageMenu = false
-                    }
-                }
-            },
-            confirmButton = {},
-            dismissButton = {
-                TextButton(onClick = { showLanguageMenu = false }) {
-                    Text(text = stringResource(R.string.action_cancel))
-                }
-            }
-        )
     }
 
     // --- DELETE CONFIRMATION DIALOG ---

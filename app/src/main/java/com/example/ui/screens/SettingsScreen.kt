@@ -129,9 +129,14 @@ fun SettingsScreen(
                         icon = Icons.Default.Menu,
                         title = stringResource(R.string.language_selection),
                         subtitle = when (activeLocale) {
-                            "zh" -> "简体中文"
+                            "zh" -> "简体中文 / Chinese"
                             "en" -> "English"
-                            else -> "日本語"
+                            "ar" -> "العربية / Arabic"
+                            "fr" -> "Français / French"
+                            "ru" -> "Русский / Russian"
+                            "es" -> "Español / Spanish"
+                            "ja" -> "日本語 / Japanese"
+                            else -> "English"
                         },
                         onClick = { showLanguageMenu = true }
                     )
@@ -184,7 +189,11 @@ fun SettingsScreen(
             },
             text = {
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    LanguageMenuOption("简体中文", activeLocale == "zh") {
+                    LanguageMenuOption("العربية / Arabic", activeLocale == "ar") {
+                        viewModel.updateLocale("ar")
+                        showLanguageMenu = false
+                    }
+                    LanguageMenuOption("简体中文 / Chinese", activeLocale == "zh") {
                         viewModel.updateLocale("zh")
                         showLanguageMenu = false
                     }
@@ -192,7 +201,19 @@ fun SettingsScreen(
                         viewModel.updateLocale("en")
                         showLanguageMenu = false
                     }
-                    LanguageMenuOption("日本語", activeLocale == "ja") {
+                    LanguageMenuOption("Français / French", activeLocale == "fr") {
+                        viewModel.updateLocale("fr")
+                        showLanguageMenu = false
+                    }
+                    LanguageMenuOption("Русский / Russian", activeLocale == "ru") {
+                        viewModel.updateLocale("ru")
+                        showLanguageMenu = false
+                    }
+                    LanguageMenuOption("Español / Spanish", activeLocale == "es") {
+                        viewModel.updateLocale("es")
+                        showLanguageMenu = false
+                    }
+                    LanguageMenuOption("日本語 / Japanese", activeLocale == "ja") {
                         viewModel.updateLocale("ja")
                         showLanguageMenu = false
                     }
