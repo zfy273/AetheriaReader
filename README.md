@@ -1,21 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 📚 阅读器 (Local Reader)
 
-# Run and deploy your AI Studio app
+一款精美、流畅的本地电子书与漫画阅读器。支持多种格式，专为提供沉浸式的阅读体验而设计。
 
-This contains everything you need to run your app locally.
+## ✨ 核心功能
 
-View your app in AI Studio: https://ai.studio/apps/850a269a-a36a-4332-9c0f-fa2a7fca0138
+- 📖 **多格式支持**：全面支持 TXT 纯文本、PDF 文档以及 ZIP/CBZ 漫画格式。
+- 🎨 **精美 UI 设计**：采用 Material Design 3 设计规范，配合流畅的弹簧微动画（如卡片按压回弹），带来丝滑的操作体验。
+- 🌗 **护眼主题**：提供“纸质暖白”与“水墨深夜”等多种阅读背景，适应不同光线环境。
+- 🌍 **多语言切换**：内置灵活的本地化支持，无需重启应用即可即时切换语言（支持中文、英文等）。
+- 📂 **本地书架管理**：可以轻松导入本地书籍，自动分析提取书籍基本信息与阅读进度。
+- 🔖 **手势与快速翻页**：支持页面点击及滑块快速定位，让阅读不间断。
 
-## Run Locally
+## 🚀 获取与编译 APK
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+本应用基于现代 Android 架构开发 (Kotlin + Jetpack Compose)。
 
+### 获取 APK 文件的路径
+如果您在本地电脑上使用 **Android Studio** 或命令行自行编译本代码：
+1. 请在项目根目录下打开终端，运行：
+   ```bash
+   ./gradlew assembleDebug
+   ```
+2. 编译成功后，APK 文件的相对存放路径为：
+   **`app/build/outputs/apk/debug/app-debug.apk`**
+   （您可以在文件资源管理器中按照这个路径找到生成的安装包）
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+## 🛠 技术架构
+
+- **语言**: Kotlin
+- **UI框架**: Jetpack Compose
+- **架构**: MVVM (Model-View-ViewModel)
+- **异步处理**: Kotlin Coroutines & StateFlow
